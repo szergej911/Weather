@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { WeatherData } from "../types/api";
 import { fetchWeather } from "../api/userApi";
+import React from "react";
 
 export default function Main() {
   const [city, setCity] = useState<string>("Budapest");
