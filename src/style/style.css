@@ -1,16 +1,24 @@
-/* nav {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.homepage {
-  text-align: center;
-}
-
 .homepage-container {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  flex-direction: column;
 }
-  */
+
+.nav-container {
+  display: flex;
+  order: 1;
+}
+
+:root {
+  background-color: #10172b;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+}
+
+button {
+  background-color: #ffa500;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}

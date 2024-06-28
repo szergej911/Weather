@@ -3,6 +3,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Nav from "./Nav";
 import ForecastAside from "./ForecastAside";
+import "../style/style.css";
 
 interface HomePageProps {
   onSubmit: (event: FormEvent<HTMLFormElement>) => void;
@@ -39,7 +40,9 @@ const HomePage: FC<HomePageProps> = ({
         handleInputChange={handleInputChange}
       />
       <div className="homepage-container">
-        <Nav />
+        <div className="nav-container">
+          <Nav />
+        </div>
         <Main
           name={name}
           temp_c={temp_c}

@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "../style/style.css";
 
 interface MainProps {
   name: string | undefined;
