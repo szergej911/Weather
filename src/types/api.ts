@@ -12,6 +12,7 @@ export interface Location {
 
 interface ForecastHour {
   time: string;
+  temp_c: number;
 }
 
 export interface CurrentWeather {
@@ -36,6 +37,11 @@ interface ForecastDay {
     is_sun_up: number;
   };
   day: {
+    mintemp_c: number;
+    maxtemp_c: number;
+    maxwind_kph: number;
+    daily_chance_of_rain: number;
+    uv: number;
     condition: {
       text: string;
       icon: string;
