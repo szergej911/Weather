@@ -25,9 +25,10 @@ const Main: FC<MainProps> = ({
     <div>
       {
         <div>
-          <h2>Weather in {name}</h2>
-          <p>Temperature: {temp_c}°C</p>
+          <h2>{name}</h2>
+
           <p>Description: {condition_text}</p>
+          <p>{temp_c}°C</p>
         </div>
       }
       <section>
@@ -40,7 +41,7 @@ const Main: FC<MainProps> = ({
         <p>UV Index: {uv}</p>
         <p>
           Chance of rain:
-          {daily_chance_of_rain}
+          {" " + daily_chance_of_rain} %
         </p>
         <p>Wind: {maxwind_kph}</p>
       </section>

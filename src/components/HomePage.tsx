@@ -34,15 +34,16 @@ const HomePage: FC<HomePageProps> = ({
 }) => {
   return (
     <div className="homepage">
-      <Header
-        onSubmit={onSubmit}
-        inputCity={inputCity}
-        handleInputChange={handleInputChange}
-      />
-      <div className="homepage-container">
-        <div className="nav-container">
-          <Nav />
-        </div>
+      <div className="nav-container">
+        <Nav />
+      </div>
+      <div className="nav-main-container">
+        <Header
+          onSubmit={onSubmit}
+          inputCity={inputCity}
+          handleInputChange={handleInputChange}
+        />
+
         <Main
           name={name}
           temp_c={temp_c}
@@ -53,6 +54,8 @@ const HomePage: FC<HomePageProps> = ({
           maxwind_kph={maxwind_kph}
           foreCastDays={foreCastDays}
         />
+      </div>
+      <div className="aside-container">
         <ForecastAside foreCastDays={foreCastDays} />
       </div>
     </div>

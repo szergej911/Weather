@@ -47,7 +47,7 @@ const App: FC = () => {
             .filter((_, index) => (index + 1) % 4 === 0)
             .map((hours) => (
               <p>
-                {hours.time} {hours.temp_c}
+                {hours.time} {hours.temp_c} °C
               </p>
             ))}
         </p>

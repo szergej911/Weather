@@ -20,7 +20,9 @@ const Header: FC<HeaderProps> = ({
           onChange={handleInputChange}
           placeholder="Enter city name"
         />
-        <button type="submit">Get Weather</button>
+        <button hidden type="submit">
+          Get Weather
+        </button>
       </form>
     </div>
   );

@@ -1,17 +1,17 @@
-.homepage-container {
+nav {
   display: flex;
   flex-direction: column;
-}
-
-.nav-container {
-  display: flex;
-  order: 1;
+  gap: 15px;
 }
 
 :root {
   background-color: #10172b;
   font-family: "Roboto", sans-serif;
   color: #ffffff;
+}
+
+.homepage {
+  display: flex;
 }
 
 button {
