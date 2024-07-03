@@ -33,7 +33,7 @@ const HomePage: FC<HomePageProps> = ({
   foreCastDays,
 }) => {
   return (
-    <div className="homepage">
+    <div className=" bg-slate-900">
       <div className="nav-container">
         <Nav />
       </div>
