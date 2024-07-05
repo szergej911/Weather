@@ -1,9 +1,8 @@
 import { FC } from "react";
-
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { WeatherData } from "./types/api";
 import { fetchWeather } from "./api/userApi";
-
+import "./style/style.css";
 import HomePage from "./components/HomePage";
 import { Route, Routes } from "react-router-dom";
 import CitiesPage from "./components/CitiesPage";
@@ -74,30 +73,32 @@ const App: FC = () => {
   const maxwind_kph = weather?.forecast.forecastday[0].day.maxwind_kph;
 
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <HomePage
-            onSubmit={handleSubmit}
-            inputCity={inputCity}
-            handleInputChange={handleInputChange}
-            name={name}
-            temp_c={temp_c}
-            condition_text={condition_text}
-            todaysForeCastHours={todaysForeCastHours}
-            uv={uv}
-            daily_chance_of_rain={daily_chance_of_rain}
-            maxwind_kph={maxwind_kph}
-            foreCastDays={foreCastDays}
-          />
-        }
-      />
-      <Route
-        path="/cities"
-        element={<CitiesPage weatherHistory={weatherHistory} />}
-      />
-    </Routes>
+    <div className="min-h-screen flex flex-col md:flex-row">
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <HomePage
+              onSubmit={handleSubmit}
+              inputCity={inputCity}
+              handleInputChange={handleInputChange}
+              name={name}
+              temp_c={temp_c}
+              condition_text={condition_text}
+              todaysForeCastHours={todaysForeCastHours}
+              uv={uv}
+              daily_chance_of_rain={daily_chance_of_rain}
+              maxwind_kph={maxwind_kph}
+              foreCastDays={foreCastDays}
+            />
+          }
+        />
+        <Route
+          path="/cities"
+          element={<CitiesPage weatherHistory={weatherHistory} />}
+        />
+      </Routes>
+    </div>
   );
 };
 

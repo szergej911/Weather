@@ -4,8 +4,8 @@ import "../style/style.css";
 
 const Nav: FC = () => {
   return (
-    <nav className="flex flex-col gap-4 bg-slate-800 w-28 p-5 text-center rounded-3xl">
-      <NavLink className={"text-gray-400 hover:text-white"} to={"/"}>
+    <nav className=" bg-gray-800 text-white p-4 flex flex-col">
+      <NavLink className={"text-gray-400  hover:text-white"} to={"/"}>
         Placeholder for home icon
       </NavLink>
       <NavLink className={"text-gray-400  hover:text-white "} to={"/"}>

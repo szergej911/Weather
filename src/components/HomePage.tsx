@@ -33,31 +33,27 @@ const HomePage: FC<HomePageProps> = ({
   foreCastDays,
 }) => {
   return (
-    <div className=" bg-slate-900">
-      <div className="nav-container">
-        <Nav />
-      </div>
-      <div className="nav-main-container">
-        <Header
-          onSubmit={onSubmit}
-          inputCity={inputCity}
-          handleInputChange={handleInputChange}
-        />
+    <div className="flex flex-col items-center p-6">
+      <Nav />
 
-        <Main
-          name={name}
-          temp_c={temp_c}
-          condition_text={condition_text}
-          todaysForeCastHours={todaysForeCastHours}
-          uv={uv}
-          daily_chance_of_rain={daily_chance_of_rain}
-          maxwind_kph={maxwind_kph}
-          foreCastDays={foreCastDays}
-        />
-      </div>
-      <div className="aside-container">
-        <ForecastAside foreCastDays={foreCastDays} />
-      </div>
+      <Header
+        onSubmit={onSubmit}
+        inputCity={inputCity}
+        handleInputChange={handleInputChange}
+      />
+
+      <Main
+        name={name}
+        temp_c={temp_c}
+        condition_text={condition_text}
+        todaysForeCastHours={todaysForeCastHours}
+        uv={uv}
+        daily_chance_of_rain={daily_chance_of_rain}
+        maxwind_kph={maxwind_kph}
+        foreCastDays={foreCastDays}
+      />
+
+      <ForecastAside foreCastDays={foreCastDays} />
     </div>
   );
 };

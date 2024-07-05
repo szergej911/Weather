@@ -19,6 +19,7 @@ const Header: FC<HeaderProps> = ({
           value={inputCity}
           onChange={handleInputChange}
           placeholder="Enter city name"
+          className=" bg-slate-800 placeholder-white"
         />
         <button hidden type="submit">
           Get Weather

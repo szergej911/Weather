@@ -25,25 +25,27 @@ const Main: FC<MainProps> = ({
     <div>
       {
         <div>
-          <h2>{name}</h2>
+          <h2 className="text-white">{name}</h2>
 
-          <p>Description: {condition_text}</p>
-          <p>{temp_c}°C</p>
+          <p className="text-gray-400">Description: {condition_text}</p>
+          <p className="text-white">{temp_c}°C</p>
         </div>
       }
-      <section>
-        <p>TODAY'S </p>
+      <section className="text-gray-400">
+        <p>TODAY'S FORECAST</p>
         <p>{todaysForeCastHours}</p>
       </section>
-      <section>
+      <section className="text-gray-400">
         AIR CONDITIONS
-        <button>See more</button>
-        <p>UV Index: {uv}</p>
-        <p>
-          Chance of rain:
-          {" " + daily_chance_of_rain} %
-        </p>
-        <p>Wind: {maxwind_kph}</p>
+        <button className="bg-blue-600 rounded-2xl text-white px-3 py-1">
+          See more
+        </button>
+        <p>UV Index:</p>
+        <p className="text-gray-200">{uv}</p>
+        <p>Chance of rain:</p>
+        <p className="text-gray-200">{daily_chance_of_rain} %</p>
+        <p>Wind:</p>
+        <p className="text-gray-200">{maxwind_kph}</p>
       </section>
     </div>
   );
