@@ -6,10 +6,12 @@ interface WeatherListProps {
 }
 
 const WeatherList: React.FC<WeatherListProps> = ({ weatherHistory }) => {
-  const [clickedLocation, setClickedLocation] = useState<string | null>(null);
+  const [clickedLocation, setClickedLocation] = useState<WeatherData | null>(
+    null
+  );
 
   const handleClick = (id: number) => {
-    setClickedLocation(weatherHistory[id].location.name);
+    setClickedLocation(weatherHistory[id]);
   };
 
   return (
@@ -31,7 +33,8 @@ const WeatherList: React.FC<WeatherListProps> = ({ weatherHistory }) => {
       )}
       {clickedLocation && (
         <div style={{ marginTop: "20px" }}>
-          <h2>Clicked Location: {clickedLocation}</h2>
+          <h2>{clickedLocation.location.name}</h2>
+          <p>{}</p>
         </div>
       )}
     </div>

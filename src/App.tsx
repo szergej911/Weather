@@ -73,7 +73,7 @@ const App: FC = () => {
   const maxwind_kph = weather?.forecast.forecastday[0].day.maxwind_kph;
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row">
+    <div>
       <Routes>
         <Route
           path="/"
@@ -95,7 +95,14 @@ const App: FC = () => {
         />
         <Route
           path="/cities"
-          element={<CitiesPage weatherHistory={weatherHistory} />}
+          element={
+            <CitiesPage
+              onSubmit={handleSubmit}
+              inputCity={inputCity}
+              handleInputChange={handleInputChange}
+              weatherHistory={weatherHistory}
+            />
+          }
         />
       </Routes>
     </div>
