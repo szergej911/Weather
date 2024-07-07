@@ -12,6 +12,7 @@ interface HomePageProps {
   name: string | undefined;
   temp_c: number | undefined;
   condition_text: string | undefined;
+  icon: string | undefined;
   todaysForeCastHours: JSX.Element[] | undefined;
   uv: number | undefined;
   daily_chance_of_rain: number | undefined;
@@ -31,9 +32,10 @@ const HomePage: FC<HomePageProps> = ({
   daily_chance_of_rain,
   maxwind_kph,
   foreCastDays,
+  icon,
 }) => {
   return (
-    <div className="flex flex-col items-center p-6">
+    <div className="px-6 text-center">
       <Nav />
 
       <Header
@@ -51,6 +53,7 @@ const HomePage: FC<HomePageProps> = ({
         daily_chance_of_rain={daily_chance_of_rain}
         maxwind_kph={maxwind_kph}
         foreCastDays={foreCastDays}
+        icon={icon}
       />
 
       <ForecastAside foreCastDays={foreCastDays} />

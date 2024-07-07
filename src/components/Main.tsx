@@ -5,6 +5,7 @@ interface MainProps {
   name: string | undefined;
   temp_c: number | undefined;
   condition_text: string | undefined;
+  icon: string | undefined;
   todaysForeCastHours: JSX.Element[] | undefined;
   uv: number | undefined;
   daily_chance_of_rain: number | undefined;
@@ -20,6 +21,7 @@ const Main: FC<MainProps> = ({
   uv,
   daily_chance_of_rain,
   maxwind_kph,
+  icon,
 }) => {
   return (
     <div>
@@ -27,8 +29,11 @@ const Main: FC<MainProps> = ({
         <div>
           <h2 className="text-white">{name}</h2>
 
-          <p className="text-gray-400">Description: {condition_text}</p>
+          <p className="text-gray-400">{condition_text}</p>
           <p className="text-white">{temp_c}°C</p>
+          <div className="flex justify-center">
+            <img src={icon} alt={icon} />
+          </div>
         </div>
       }
       <section className="text-gray-400">

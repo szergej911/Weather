@@ -57,7 +57,7 @@ const App: FC = () => {
             .filter((_, index) => (index + 1) % 4 === 0)
             .map((hours) => (
               <p>
-                {hours.time} {hours.temp_c} °C
+                {hours.time.slice(11)} {hours.temp_c} °C
               </p>
             ))}
         </p>
@@ -71,6 +71,7 @@ const App: FC = () => {
   const daily_chance_of_rain =
     weather?.forecast.forecastday[0].day.daily_chance_of_rain;
   const maxwind_kph = weather?.forecast.forecastday[0].day.maxwind_kph;
+  const icon = weather?.forecast.forecastday[0].day.condition.icon;
 
   return (
     <div>
@@ -90,6 +91,7 @@ const App: FC = () => {
               daily_chance_of_rain={daily_chance_of_rain}
               maxwind_kph={maxwind_kph}
               foreCastDays={foreCastDays}
+              icon={icon}
             />
           }
         />

@@ -8,7 +8,7 @@ interface ForecastAsideProps {
 const ForecastAside: FC<ForecastAsideProps> = ({ foreCastDays }) => {
   return (
     <aside className="text-gray-400">
-      <header>7-DAY FORECAST</header>
+      <header>3-DAY FORECAST</header>
       <p>{foreCastDays} </p>
     </aside>
   );
