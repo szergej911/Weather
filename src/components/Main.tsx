@@ -13,6 +13,13 @@ interface MainProps {
   foreCastDays: JSX.Element[] | undefined;
 }
 
+let seeMore = false;
+
+const handleClick = (): void => {
+  seeMore = !seeMore;
+  console.log(seeMore);
+};
+
 const Main: FC<MainProps> = ({
   name,
   temp_c,
@@ -42,7 +49,10 @@ const Main: FC<MainProps> = ({
       </section>
       <section className="text-gray-400">
         AIR CONDITIONS
-        <button className="bg-blue-600 rounded-2xl text-white px-3 py-1">
+        <button
+          className="bg-blue-600 rounded-2xl text-white px-3 py-1"
+          onClick={handleClick}
+        >
           See more
         </button>
         <p>UV Index:</p>
